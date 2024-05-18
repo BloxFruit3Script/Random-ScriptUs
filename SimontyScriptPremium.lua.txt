@@ -149,36 +149,7 @@ end)
 Section:NewButton("Update Dropdown", "Refreshes Dropdown", function()
   dropdown:Refresh(newList)
 end)
-local Players = game:GetService("Players")
 
--- Function to kick a player by name
-local function kickPlayer(playerName)
-    local playerToKick = Players:FindFirstChild(playerName)
-    if playerToKick then
-        playerToKick:Kick("You have been kicked from the game.")
-        print("Player " .. playerName .. " has been kicked.")
-    else
-        print("Player " .. playerName .. " not found.")
-    end
-end
-
--- Example usage: kick a player by name
-kickPlayer("PlayerName")
-
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local RemoteEvent = Instance.new("RemoteEvent")
-RemoteEvent.Name = "KickPlayerEvent"
-RemoteEvent.Parent = ReplicatedStorage
-
-RemoteEvent.OnServerEvent:Connect(function(player, playerName)
-    local playerToKick = game.Players:FindFirstChild(playerName)
-    if playerToKick then
-        playerToKick:Kick("You have been kicked from the game.")
-        print("Player " .. playerName .. " has been kicked.")
-    else
-        print("Player " .. playerName .. " not found.")
-    end
-end)
 local Tab = Window:NewTab("Credit")
 local Section = Tab:NewSection("Made By Simon")
 local Section = Tab:NewSection("Paid Script")
