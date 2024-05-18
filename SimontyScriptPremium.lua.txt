@@ -131,7 +131,6 @@ Section:NewToggle("Infinite Jump", "Lets you infinitely jump", function()
             end
         end)
     end)
-
 local Tab = Window:NewTab("Credit")
 local Section = Tab:NewSection("Made By Simon")
 local Section = Tab:NewSection("Paid Script")
