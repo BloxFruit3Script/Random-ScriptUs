@@ -135,5 +135,3 @@ local Tab = Window:NewTab("Credit")
 local Section = Tab:NewSection("Made By Simon")
 local Section = Tab:NewSection("Paid Script")
 local Section = Tab:NewSection("Youtube:@BaconBlox524")
-Section:NewButton("Discord Link", "ButtonInfo", function()
-          		setclipboard("https://discord.com/invite/SKjx3F3d") --Put The Link Here
