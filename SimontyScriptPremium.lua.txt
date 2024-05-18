@@ -1,4 +1,3 @@
---Loader
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Name = "ScreenGui"
@@ -24,60 +23,6 @@ local Corner = Instance.new("UICorner")
 Corner.Name = "Corner"
 Corner.Parent = Toggle
 
---Locals
-local playerName = game.Players.LocalPlayer.Name
-local placeName = game.PlaceId
-local playerId = game.Players.LocalPlayer.UserId
-local placeId = game.PlaceId
-local gameTime = os.date("%c", os.time())
-local placeId = game.PlaceId
-local player = game:GetService("Players").LocalPlayer
-local accountAge = player.AccountAge
-local executor = identifyexecutor() or "unknown"
-local currentDate = os.date("%Y-%m-%d")
-local gameName = game.Name
-
---Tabs And Section
-local Tab1 = Window:NewTab("Info")
-local Section = Tab1:NewSection("PlayerInfo")
-local Section = Tab1:NewSection("UserName:" .. playerName)
-local Section = Tab1:NewSection("DisplayName: " .. player.DisplayName)
-local Section = Tab1:NewSection("UserID: " .. playerId)
-local Section = Tab1:NewSection("AccountAge: " .. accountAge)
-
-if table.find({Enum.Platform.Android}, game:GetService("UserInputService"):GetPlatform()) then 
-local Section = Tab1:NewSection("Device : Android")
-
-end
-
-if table.find({Enum.Platform.IOS}, game:GetService("UserInputService"):GetPlatform()) then 
-local Section = Tab1:NewSection("Device : IOS")
-
-end
-
-if table.find({Enum.Platform.Windows}, game:GetService("UserInputService"):GetPlatform()) then 
-local Section = Tab1:NewSection("Device : PC (Windows)")
-
-end
-
-if table.find({Enum.Platform.OSX}, game:GetService("UserInputService"):GetPlatform()) then 
-local Section = Tab1:NewSection("Device : PC (OSX or macOS)")
-
-end
-
-if table.find({Enum.Platform.Linux}, game:GetService("UserInputService"):GetPlatform()) then 
-local Section = Tab1:NewSection("Device : PC Linux")
-
-end
-
-if table.find({Enum.Platform.XBoxOne}, game:GetService("UserInputService"):GetPlatform()) then 
-local Section = Tab1:NewSection("Device : XBoxOne")
-
-end
-local Section = Tab1:NewSection("Game: " .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
-local Section = Tab1:NewSection("PlaceId: " .. placeId)
-local Section = Tab1:NewSection("Date: " .. currentDate)
-local Section = Tab1:NewSection("executor: " .. executor)
 local Window = Library.CreateLib("SimonScript", "BloodTheme")
 local Tab = Window:NewTab("Blox Fruit script")
 local Section = Tab:NewSection("Blox Fruit Script")
