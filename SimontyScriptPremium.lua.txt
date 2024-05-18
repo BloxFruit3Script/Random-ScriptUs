@@ -131,24 +131,6 @@ Section:NewToggle("Infinite Jump", "Lets you infinitely jump", function()
             end
         end)
     end)
-Section:NewDropdown("Teleport", "DropdownInf", {"Respawn", "SafeZone", "Starter"}, function(currentOption)
-    print(currentOption)
-end)
-
-local oldList = {
-  "2019",
-  "2020"
-}
-local newList = {
-  "2021",
-  "2022"
-}
-local dropdown = Section:NewDropdown("Dropdown","Info", oldList, function()
-
-end)
-Section:NewButton("Update Dropdown", "Refreshes Dropdown", function()
-  dropdown:Refresh(newList)
-end)
 
 local Tab = Window:NewTab("Credit")
 local Section = Tab:NewSection("Made By Simon")
